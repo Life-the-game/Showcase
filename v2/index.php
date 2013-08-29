@@ -47,7 +47,7 @@ function	getpage() {
 		
 		
 			<div id="page">
-			  <?php (getpage() == 'home' ? include_once('page/'.getpage().'.php') : "<h1> troll</h1>"); ?>
+			  <?php (getpage() == 'home' ? include_once('page/'.getpage().'.php') : ""); ?>
 			</div>	
 
 			<footer style='display:none;'>
