@@ -12,25 +12,16 @@ body
 
 #core
 {
-	#background-color: #000000;
 	margin-left:12%;
 	margin-right:12%;
-	margin-top:5%;
+	margin-top:2%;
 	color:#FFFFFF;
 }
 
 .corner
 {
-
-#	width:10%;
-
-#	text-align:center;
-#	vertical-align:middle;
-	
-#	font-size:1.5em;
-
 	position:fixed;
-	display:inline-block;	
+	display:inline-block;
 	color:#FFFFFF;
 }
 
@@ -61,12 +52,50 @@ body
 
 #botright
 {
-	bottom:40px;
+	bottom:50px;
 	right:10px;
 
 	font-family:Futura;
 	font-size:64px;
 	
+}
+
+#botdiv
+{
+	bottom:50px;
+	left:430px;
+	right:290px;
+	background-color:#26b671;
+}
+
+
+#stripe1
+{
+	bottom:25px;
+	left:0%;
+	height:25px;
+	width:0px;
+	background-color:#FFFFFF;
+}
+
+#stripe2
+{
+	bottom:25px;
+	left:428px;
+	right:0px;
+	height: 25px;
+	width:0px;
+	background-color:#FFFFFF;
+}
+
+#stripe3
+{
+	bottom:0px;
+	left:0px;
+	right:0px;
+	height:50px;
+	width:100%;
+	background-color:#26b671;
 }
 
 #page
@@ -76,7 +105,7 @@ body
 
 #homepics
 {
-    height: 180px;
+    height: 130px;
 	width:auto;
 	margin-top:5%;
 }
@@ -142,6 +171,7 @@ p
 .btnlife:hover
 {
 	text-decoration:underline;
+	cursor:pointer;
 }
 
 #round
@@ -149,4 +179,18 @@ p
 	border-radius: 150px;
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
+}
+
+#betaform
+{
+#	background-color:#FF0000;
+	opacity:0;
+}
+
+#roundbox
+{
+	font-size:28px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }

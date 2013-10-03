@@ -81,6 +81,6 @@ function makeGrid($per_line, $elements) {
     $i++;
 	$counter += 1;
   } ?>
-  </div> <!-- row -->
+  <br /><br /><br /></div> <!-- row -->
 <?php
 }
