@@ -6,8 +6,12 @@ if (!($handle = fopen($url, "r")))
   return ;
 $users = array();
 while ($a = fgetcsv($handle, 1000, ","))
-  if ($a[0] !== '_' && $a[0] !== 'Nickname')
+  if ($a[0] !== 'Nickname') {
+    if ($a[0] == '_' && !isset($_GET['all'])) {
+      break;
+    }
     $users[] = $a;
+  }
 fclose($handle);
 
 ?>
@@ -21,7 +25,7 @@ function printUser($user, $counter) {
   <div class="row-fluid" style="<?php echo ($counter % 2 != 0 ? 'margin-left:30%;' : 'margin-right:20%;' ) ?>" >
     <?php if ($counter % 2 == 0) {?>
     <div class="col-md-4">
-      <img id="round" src="http://gravatar.com/avatar/<?php echo md5($user[6]) ?>?d=mm&s=200">
+      <img src="<?= !empty($user[12]) ? $user[12] : 'http://gravatar.com/avatar/'.md5($user[6]).'?d=mm&s=200' ?>" class="round">
     </div>
 	<?php } ?>
     <div class="col-md-8">
@@ -41,7 +45,8 @@ foreach ($jobs as $job) {
     </div>
 	<?php if ($counter % 2 != 0) {?>
     <div class="col-md-4">
-      <img id="round" src="http://gravatar.com/avatar/<?php echo md5($user[6]) ?>?d=mm&s=200">
+      <img src="<?= !empty($user[12]) ? $user[12] : 'http://gravatar.com/avatar/'.md5($user[6]).'?d=mm&s=200' ?>" class="round">
+
     </div>
 	<?php } ?>
   </div>
@@ -55,6 +60,7 @@ foreach ($jobs as $job) {
      <li><strong>Phone:</strong> <?php echo $user[8]; ?></li>
      <li><strong>Alternative Phone:</strong> <?php echo $user[9]; ?></li>
      <li><strong>Google+:</strong> <a href="<?php echo $user[11]; ?>">Link</a></li>
+     <li><strong>Birthday:</strong> <?= $user[13] ?></li>
    </ul></div>
 <?php }
 }
