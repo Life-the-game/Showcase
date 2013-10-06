@@ -2,7 +2,7 @@
 <?php
 
 	include_once("infos.php");
-	$homepage = "/showcaseNew";
+	$homepage = ".";
 	
 ?>
 
@@ -155,10 +155,10 @@
 	</div>
 	
 	<div class="corner" id="botdiv" <?php echo(isset($_GET["team"])?'style="display:none;"':'') ?> >
-		<span class="btnlife" id="betaform" >Want to become a beta-tester ?</span>
+		<span class="btnlife" id="betaform" >Want to play the game?</span>
 		<span style="display:none; opacity:0;" id="betabox" >
 		<input type='text' id='roundbox' size=25 name="mail" onkeyup='checkmail()' />
-		<br/><span class='btnlife' id='startplaying' >PLAY!</span> </span>
+		<br/><span class='btnlife' id='startplaying' >Join us!</span> </span>
 	</div>
 	
 	<span class="corner" id="stripe1">
