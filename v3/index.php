@@ -135,10 +135,11 @@
 	</div>
 	
 	<div class="corner" id="topleft" >
+		<div class="row-fluid"><div class="md-col-6">
 		<img src='imgs/fb.png' id="clickable" onclick="window.open(
-       'https://www.facebook.com/lifeplaythegame', '_blank');"/>
-		<img src='imgs/tt.png' id="clickable" onclick="window.open(
-       'https://twitter.com/lifeplaythegame', '_blank');"/>
+       'https://www.facebook.com/lifeplaythegame', '_blank');"/></div>
+		<div class="md-col-6"><img src='imgs/tt.png' id="clickable" onclick="window.open(
+       'https://twitter.com/lifeplaythegame', '_blank');"/></div></div>
 	</div>
 	
 	<div class="corner" id="topright" >
@@ -157,7 +158,7 @@
 	<div class="corner" id="botdiv" <?php echo(isset($_GET["team"])?'style="display:none;"':'') ?> >
 		<span class="btnlife" id="betaform" >Want to play the game?</span>
 		<span style="display:none; opacity:0;" id="betabox" >
-		<input type='text' id='roundbox' size=25 name="mail" onkeyup='checkmail()' />
+		<input type='text' id='roundbox' size=15 name="mail" onkeyup='checkmail()' />
 		<br/><span class='btnlife' id='startplaying' >Join us!</span> </span>
 	</div>
 	
